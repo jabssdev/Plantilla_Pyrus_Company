@@ -26,10 +26,15 @@
       -webkit-appearance: none;
       margin: 0;
     }
+
     input[type="number"] {
       -moz-appearance: textfield;
     }
-  </style>  
+
+    .th-10-table {
+      padding-right: 10px !important;
+    }
+  </style>
   <!--all pages-->
   <!-- only pages::css -->
   @yield('styles')

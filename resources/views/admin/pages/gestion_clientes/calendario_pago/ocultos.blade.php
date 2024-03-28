@@ -121,25 +121,13 @@
             <span class="fs-7">15</span>
           </td>
           <td class="text-center">
-            <a href="#" class="btn btn-sm btn-light btn-flex btn-center text-black" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-              Acciones
-              <i class="ki-outline ki-down fs-5 ms-1"></i>
+            <a href="#" class="btn btn-icon btn-light-eye-blue btn-sm me-1" data-bs-toggle="modal" data-bs-target="#kt_modal_ocultos" title="Nota">
+              <i class="ki-outline ki-notepad-edit fs-2"></i>
             </a>
-            <!--begin::Menu-->
-            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3"> Nota </a>
-              </div>
-              <!--end::Menu item-->
 
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3"> Activar </a>
-              </div>
-              <!--end::Menu item-->
-            </div>
-            <!--end::Menu-->
+            <a href="#" class="btn btn-icon btn-light-primary-green btn-sm" title="Activar">
+              <i class="ki-outline ki-exit-left fs-2"></i>
+            </a>
           </td>
         </tr>
         <tr style="background-color: rgba(0, 0, 255, 0.6)">

@@ -50,12 +50,12 @@
             <thead>
                 <tr class="text-start text-gray-400 fw-semibold fs-7 gs-0 table-bg" style="border-bottom: none !important">
                     <th class="min-w-55px text-center" style="padding-right: 10px !important;">#</th>
-                    <th class="min-w-90px text-center" style="padding-right: 10px !important;">Código Cliente</th>
+                    <th class="min-w-60px text-center" style="padding-right: 10px !important;">Código Cliente</th>
                     <th class="min-w-100px text-center" style="padding-right: 10px !important;">Cpanel</th>
-                    <th class="min-w-125px text-center" style="padding-right: 10px !important;">Usuario</th>
-                    <th class="min-w-100px text-center" style="padding-right: 10px !important;">Clave</th>
-                    <th class="min-w-100px text-center" style="padding-right: 10px !important;">Fecha Activación</th>
-                    <th class="min-w-100px text-center" style="padding-right: 10px !important;">Fecha Término</th>
+                    <th class="min-w-100px text-center" style="padding-right: 10px !important;">Usuario</th>
+                    <th class="min-w-70px text-center" style="padding-right: 10px !important;">Clave</th>
+                    <th class="min-w-70px text-center" style="padding-right: 10px !important;">Fecha Activación</th>
+                    <th class="min-w-70px text-center" style="padding-right: 10px !important;">Fecha Término</th>
                     <th class="min-w-100px text-center" style="padding-right: 10px !important;">Acciones</th>
                 </tr>
             </thead>
@@ -127,25 +127,13 @@
                         <span class="fs-7">2024-10-08</span>
                     </td>
                     <td class="text-center">
-                        <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                            Acciones
-                            <i class="ki-outline ki-down fs-5 ms-1"></i>
+                        <a href="#" class="btn btn-icon btn-light-primary-green btn-sm me-1" data-bs-toggle="modal" data-bs-target="#kt_modal_detalle_clave" title="Detalle">
+                            <i class="ki-outline ki-eye fs-2"></i>
                         </a>
-                        <!--begin::Menu-->
-                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="#" class="menu-link px-3"> Detalle </a>
-                            </div>
-                            <!--end::Menu item-->
 
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="#" class="menu-link px-3"> Activar </a>
-                            </div>
-                            <!--end::Menu item-->
-                        </div>
-                        <!--end::Menu-->
+                        <a href="#" class="btn btn-icon btn-light-eye-blue btn-sm me-1" title="Ocultar">
+                            <i class="ki-outline ki-exit-left fs-2"></i>
+                        </a>
                     </td>
                 </tr>
                 <tr>

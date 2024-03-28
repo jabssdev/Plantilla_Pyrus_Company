@@ -122,25 +122,13 @@
             <span class="fs-7">2024-10-08</span>
           </td>
           <td class="text-center">
-            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-              Acciones
-              <i class="ki-outline ki-down fs-5 ms-1"></i>
+            <a href="#" class="btn btn-icon btn-light-update btn-sm me-1" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_clave_whm" title="Editar">
+              <i class="ki-solid ki-pencil fs-2"></i>
             </a>
-            <!--begin::Menu-->
-            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3"> Editar </a>
-              </div>
-              <!--end::Menu item-->
 
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3" data-kt-claves-whm-filter="delete_row"> Eliminar </a>
-              </div>
-              <!--end::Menu item-->
-            </div>
-            <!--end::Menu-->
+            <a href="#" class="btn btn-icon btn-light-delete btn-sm me-1" data-kt-claves-whm-filter="delete_row" title="Eliminar">
+              <i class="ki-solid ki-trash fs-2"></i>
+            </a>
           </td>
         </tr>
         <tr>

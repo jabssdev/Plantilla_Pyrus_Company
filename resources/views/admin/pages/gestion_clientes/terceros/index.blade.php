@@ -21,8 +21,7 @@
   <div class="card-header border-0 pt-5" style="border-bottom: 1px solid var(--bs-card-border-color) !important">
     <h3 class="card-title align-items-start flex-column">
       <span class="card-label fw-bold fs-3 mb-1">
-        <span class="menu-icon align-middle"><i class="ki-outline ki-user-tick fs-1 text-pyrus"></i></span>&nbsp; Cliente / Proveedores</span
-      >
+        <span class="menu-icon align-middle"><i class="ki-outline ki-user-tick fs-1 text-pyrus"></i></span>&nbsp; Cliente / Proveedores</span>
     </h3>
   </div>
   <!--end::Title-->
@@ -58,15 +57,15 @@
     <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_client_table">
       <thead>
         <tr class="text-start text-gray-400 fw-semibold fs-7 gs-0 table-bg" style="border-bottom: none !important">
-          <th class="min-w-55px text-center">#</th>
-          <th class="min-w-90px">Código</th>
-          <th class="min-w-90px">Tipo Doc.</th>
-          <th class="min-w-90px">N° Doc</th>
-          <th class="min-w-150px">Nombre Legal</th>
-          <th class="min-w-150px">Dirección</th>
-          <th class="min-w-150px">Web</th>
-          <th class="min-w-100px">Estado</th>
-          <th class="min-w-100px text-center">Acciones</th>
+          <th class="min-w-55px  text-center th-10-table">#</th>
+          <th class="min-w-60px">Código</th>
+          <th class="min-w-60px ">Tipo Doc.</th>
+          <th class="min-w-90px ">N° Doc</th>
+          <th class="min-w-100px">Nombre Legal</th>
+          <th class="min-w-100px">Dirección</th>
+          <th class="min-w-100px">Web</th>
+          <th class="min-w-70px">Estado</th>
+          <th class="min-w-100px text-center th-10-table">Acciones</th>
         </tr>
       </thead>
       <tbody class="fw-semibold text-gray-600">
@@ -96,20 +95,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_cliente"> Editar </a>
@@ -169,51 +160,25 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
-              Acciones
-              <i class="ki-outline ki-down fs-5 ms-1"></i>
+            <a href="#" class="btn btn-icon btn-light-update btn-sm me-1" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_cliente" title="Editar">
+              <i class="ki-solid ki-pencil fs-2"></i>
             </a>
-            <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3"> Editar </a>
-              </div>
-              <!--end::Menu item-->
 
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3" data-kt-client-filter="delete_row"> Eliminar </a>
-              </div>
-              <!--end::Menu item-->
+            <a href="#" class="btn btn-icon btn-light-delete btn-sm me-1" data-kt-client-filter="delete_row" title="Eliminar">
+              <i class="ki-solid ki-trash fs-2"></i>
+            </a>
 
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3"> Dirección </a>
-              </div>
-              <!--end::Menu item-->
+            <a href="{{route('tercero.mapa.index')}}" class="btn btn-icon btn-light-eye-blue btn-sm me-1" title="Dirección">
+              <i class="ki-outline ki-geolocation-home fs-2"></i>
+            </a>
 
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3"> Mapa </a>
-              </div>
-              <!--end::Menu item-->
+            <a href="#" class="btn btn-icon btn-light-primary-green btn-sm" data-bs-toggle="modal" data-bs-target="#kt_modal_select_location" title="Ver ubicación">
+              <i class="ki-outline ki-map fs-2"></i>
+            </a>
 
-              <!--begin::Menu item-->
-              <div class="menu-item px-3">
-                <a href="#" class="menu-link px-3"> Ver </a>
-              </div>
-              <!--end::Menu item-->
-            </div>
-            <!--end::Menu-->
+            <a href="#" class="btn btn-icon btn-light-eye btn-sm me-1" data-bs-toggle="modal" data-bs-target="#kt_modal_servicio_cliente" title="Servicios">
+              <i class="ki-outline ki-eye fs-2"></i>
+            </a>
           </td>
         </tr>
         <tr>
@@ -242,20 +207,12 @@
             <span class="badge badge-light-warning fs-7 fw-bold">Temporal</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -315,20 +272,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -388,20 +337,12 @@
             <span class="badge badge-light-danger fs-7 fw-bold">Rechazado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -461,20 +402,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -534,20 +467,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -607,20 +532,12 @@
             <span class="badge badge-light-warning fs-7 fw-bold">Temporal</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -680,20 +597,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -753,20 +662,12 @@
             <span class="badge badge-light-danger fs-7 fw-bold">Rechazado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -826,20 +727,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -899,20 +792,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -972,20 +857,12 @@
             <span class="badge badge-light-warning fs-7 fw-bold">Temporal</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -1045,20 +922,12 @@
             <span class="badge btn-acept fs-7 fw-bold">Aceptado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -1118,20 +987,12 @@
             <span class="badge badge-light-danger fs-7 fw-bold">Rechazado</span>
           </td>
           <td class="text-center">
-            <a
-              href="#"
-              class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-            >
+            <a href="#" class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               Acciones
               <i class="ki-outline ki-down fs-5 ms-1"></i>
             </a>
             <!--begin::Menu-->
-            <div
-              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-              data-kt-menu="true"
-            >
+            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a href="#" class="menu-link px-3"> Editar </a>
@@ -1199,16 +1060,7 @@
         <!--begin::Modal body-->
         <div class="modal-body py-10 px-lg-17">
           <!--begin::Scroll-->
-          <div
-            class="scroll-y me-n7 pe-7"
-            id="kt_modal_create_cliente_scroll"
-            data-kt-scroll="true"
-            data-kt-scroll-activate="{default: false, lg: true}"
-            data-kt-scroll-max-height="auto"
-            data-kt-scroll-dependencies="#kt_modal_create_cliente_header"
-            data-kt-scroll-wrappers="#kt_modal_create_cliente_scroll"
-            data-kt-scroll-offset="300px"
-          >
+          <div class="scroll-y me-n7 pe-7" id="kt_modal_create_cliente_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_create_cliente_header" data-kt-scroll-wrappers="#kt_modal_create_cliente_scroll" data-kt-scroll-offset="300px">
             <!--begin::Input group-->
             <div class="mb-10">
               <!--begin::Heading-->
@@ -1266,10 +1118,8 @@
               <!--begin::Input-->
               <div class="position-relative d-flex align-items-center">
                 <input type="text" class="form-control form-control-solid" placeholder="RUC" name="n_documento" />
-                <a href="#"
-                  ><span class="input-group-text">
-                    <i class="ki-outline ki-magnifier fs-2"> </i> </span
-                ></a>
+                <a href="#"><span class="input-group-text">
+                    <i class="ki-outline ki-magnifier fs-2"> </i> </span></a>
               </div>
               <!--end::Input-->
             </div>
@@ -1282,15 +1132,7 @@
               <!--end::Label-->
 
               <!--begin::Input-->
-              <input
-                type="text"
-                class="form-control form-control-solid"
-                style="background-color: var(--bs-gray-200)"
-                placeholder="Nombre Legal / Razón Social"
-                name="nombre"
-                autocomplete="off"
-                disabled
-              />
+              <input type="text" class="form-control form-control-solid" style="background-color: var(--bs-gray-200)" placeholder="Nombre Legal / Razón Social" name="nombre" autocomplete="off" disabled />
               <!--end::Input-->
             </div>
             <!--end::Input group-->
@@ -1414,13 +1256,7 @@
               <!--end::Label-->
 
               <!--begin::Select-->
-              <select
-                name="tipo"
-                data-control="select2"
-                data-hide-search="true"
-                data-placeholder="Selecciona un tipo de cliente..."
-                class="form-select form-select-solid"
-              >
+              <select name="tipo" data-control="select2" data-hide-search="true" data-placeholder="Selecciona un tipo de cliente..." class="form-select form-select-solid">
                 <option value="">Selecciona un tipo de cliente...</option>
                 <option value="1">Cliente</option>
                 <option value="2">Proveedor</option>
@@ -1437,13 +1273,7 @@
               <!--end::Label-->
 
               <!--begin::Select-->
-              <select
-                name="estado"
-                data-control="select2"
-                data-hide-search="true"
-                data-placeholder="Selecciona un estado..."
-                class="form-select form-select-solid"
-              >
+              <select name="estado" data-control="select2" data-hide-search="true" data-placeholder="Selecciona un estado..." class="form-select form-select-solid">
                 <option value="">Selecciona un estado...</option>
                 <option value="1">Aceptado</option>
                 <option value="2">Temporal</option>
@@ -1505,16 +1335,7 @@
         <!--begin::Modal body-->
         <div class="modal-body py-10 px-lg-17">
           <!--begin::Scroll-->
-          <div
-            class="scroll-y me-n7 pe-7"
-            id="kt_modal_edit_cliente_scroll"
-            data-kt-scroll="true"
-            data-kt-scroll-activate="{default: false, lg: true}"
-            data-kt-scroll-max-height="auto"
-            data-kt-scroll-dependencies="#kt_modal_edit_cliente_header"
-            data-kt-scroll-wrappers="#kt_modal_edit_cliente_scroll"
-            data-kt-scroll-offset="300px"
-          >
+          <div class="scroll-y me-n7 pe-7" id="kt_modal_edit_cliente_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_edit_cliente_header" data-kt-scroll-wrappers="#kt_modal_edit_cliente_scroll" data-kt-scroll-offset="300px">
             <!--begin::Input group-->
             <div class="mb-10">
               <!--begin::Heading-->
@@ -1572,10 +1393,8 @@
               <!--begin::Input-->
               <div class="position-relative d-flex align-items-center">
                 <input type="text" class="form-control form-control-solid" placeholder="RUC" name="n_documento" value="15165118" />
-                <a href="#"
-                  ><span class="input-group-text">
-                    <i class="ki-outline ki-magnifier fs-2"> </i> </span
-                ></a>
+                <a href="#"><span class="input-group-text">
+                    <i class="ki-outline ki-magnifier fs-2"> </i> </span></a>
               </div>
               <!--end::Input-->
             </div>
@@ -1588,16 +1407,7 @@
               <!--end::Label-->
 
               <!--begin::Input-->
-              <input
-                type="text"
-                class="form-control form-control-solid"
-                style="background-color: var(--bs-gray-200)"
-                placeholder="Nombre Legal / Razón Social"
-                name="nombre"
-                autocomplete="off"
-                disabled
-                value="Rodolfo Conesa"
-              />
+              <input type="text" class="form-control form-control-solid" style="background-color: var(--bs-gray-200)" placeholder="Nombre Legal / Razón Social" name="nombre" autocomplete="off" disabled value="Rodolfo Conesa" />
               <!--end::Input-->
             </div>
             <!--end::Input group-->
@@ -1772,7 +1582,7 @@
     <!--end::Modal content-->
   </div>
   <!--end::Modal dialog-->
-</div>  
+</div>
 <!--end::Modal - Edit Client-->
 
 <!--begin::Modal - Select Location-->
@@ -1844,16 +1654,7 @@
         <!--begin::Modal body-->
         <div class="modal-body py-10 px-lg-17">
           <!--begin::Scroll-->
-          <div
-            class="scroll-y me-n7 pe-7"
-            id="kt_modal_servicio_cliente_scroll"
-            data-kt-scroll="true"
-            data-kt-scroll-activate="{default: false, lg: true}"
-            data-kt-scroll-max-height="auto"
-            data-kt-scroll-dependencies="#kt_modal_servicio_cliente_header"
-            data-kt-scroll-wrappers="#kt_modal_servicio_cliente_scroll"
-            data-kt-scroll-offset="300px"
-          >
+          <div class="scroll-y me-n7 pe-7" id="kt_modal_servicio_cliente_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_servicio_cliente_header" data-kt-scroll-wrappers="#kt_modal_servicio_cliente_scroll" data-kt-scroll-offset="300px">
             <!--begin::Input group-->
             <div class="d-flex flex-column mb-10 fv-row">
               <!--begin::Label-->
@@ -1862,13 +1663,7 @@
 
               <!--begin::Select-->
               <div class="d-flex">
-                <select
-                  name="servicio"
-                  data-control="select2"
-                  data-hide-search="true"
-                  data-placeholder="Selecciona un servicio..."
-                  class="form-select form-select-solid me-5"
-                >
+                <select name="servicio" data-control="select2" data-hide-search="true" data-placeholder="Selecciona un servicio..." class="form-select form-select-solid me-5">
                   <option value="">Selecciona un servicio...</option>
                   <option value="1">APP Móviles</option>
                   <option value="2">Aula virtual</option>
@@ -1971,35 +1766,35 @@
 
 <script>
   function mapaGoogle() {
-        if(document.getElementById("latitud").value==''|| document.getElementById("longitud").value==''){
-                var latitud =-8.11173879433607;
-                var longitud =-79.02869051222532;
-            }else{
-                var latitud =parseFloat(document.getElementById("latitud").value);
-                var longitud =parseFloat(document.getElementById("longitud").value);
-            }
-            
-            const myLatLng = { lat: latitud, lng: longitud };
-            
-            const  mapa = new google.maps.Map(document.getElementById('mapa'),
-            {
-                zoom: 15,
-                center: myLatLng
-            });
-
-            const marcador = new google.maps.Marker({
-                map: mapa,
-                draggable:true,
-                position: myLatLng
-            });
+    if (document.getElementById("latitud").value == '' || document.getElementById("longitud").value == '') {
+      var latitud = -8.11173879433607;
+      var longitud = -79.02869051222532;
+    } else {
+      var latitud = parseFloat(document.getElementById("latitud").value);
+      var longitud = parseFloat(document.getElementById("longitud").value);
     }
+
+    const myLatLng = {
+      lat: latitud,
+      lng: longitud
+    };
+
+    const mapa = new google.maps.Map(document.getElementById('mapa'), {
+      zoom: 15,
+      center: myLatLng
+    });
+
+    const marcador = new google.maps.Marker({
+      map: mapa,
+      draggable: true,
+      position: myLatLng
+    });
+  }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCShqlh7VDQb7M5k2y5KgdzAAjfN8Fdv3E&amp;&callback=mapaGoogle"></script>
 
 <script type="text/javascript">
-    
-    var marcadores = [];
-    
+  var marcadores = [];
 </script>
 
 @endsection
